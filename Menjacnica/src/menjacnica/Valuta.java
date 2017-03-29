@@ -12,6 +12,17 @@ public class Valuta {
 	private GregorianCalendar kupovniKurs;
 	private GregorianCalendar srednjiKurs;
 	
+	
+	
+	public Valuta(String naziv, String skraceniNaziv, GregorianCalendar prodajniKurs, GregorianCalendar kupovniKurs,
+			GregorianCalendar srednjiKurs) {
+		super();
+		this.naziv = naziv;
+		this.skraceniNaziv = skraceniNaziv;
+		this.prodajniKurs = prodajniKurs;
+		this.kupovniKurs = kupovniKurs;
+		this.srednjiKurs = srednjiKurs;
+	}
 	public String getNaziv() {
 		return naziv;
 	}
