@@ -42,6 +42,8 @@ public class Valuta {
 	public void setSrednjiKurs(GregorianCalendar srednjiKurs) {
 		this.srednjiKurs = srednjiKurs;
 	}
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
