@@ -73,6 +73,7 @@ public class Valuta {
 		result = prime * result + ((srednjiKurs == null) ? 0 : srednjiKurs.hashCode());
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
