@@ -5,11 +5,19 @@ import java.util.GregorianCalendar;
 import menjacnicaInterfejs.MenjacnicaInterfejs;
 
 public class KlasaZaImplementacijuInterfejsa implements MenjacnicaInterfejs {
-
+	public Menjacnica menj;
+	
+	
 	@Override
 	public void dodavanjeKursa(Valuta valuta) {
-		// TODO Auto-generated method stub
-
+		for (int i = 0; i < (menj.getValute()).length; i++) {
+			if((menj.getValute())[i] != null){
+				(menj.getValute())[i] = valuta;
+				return;
+			}
+		}
+		System.out.println("nema mesta u menjacnici!!!");
+		throw new RuntimeException();
 	}
 
 	@Override
