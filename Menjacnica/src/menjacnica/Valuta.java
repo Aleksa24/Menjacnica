@@ -2,6 +2,8 @@ package menjacnica;
 
 import java.util.GregorianCalendar;
 
+import javax.management.RuntimeErrorException;
+
 public class Valuta {
 
 	private String naziv;
@@ -10,36 +12,52 @@ public class Valuta {
 	private GregorianCalendar kupovniKurs;
 	private GregorianCalendar srednjiKurs;
 	
-	
-	
 	public String getNaziv() {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if (naziv == null || naziv.isEmpty()) {
+			throw new RuntimeException();
+		}else{
 		this.naziv = naziv;
+			}
 	}
 	public String getSkraceniNaziv() {
 		return skraceniNaziv;
 	}
 	public void setSkraceniNaziv(String skraceniNaziv) {
+		if (skraceniNaziv == null || skraceniNaziv.isEmpty()){
+			throw new RuntimeException();
+		}else{
 		this.skraceniNaziv = skraceniNaziv;
+		}
 	}
 	public GregorianCalendar getProdajniKurs() {
 		return prodajniKurs;
 	}
 	public void setProdajniKurs(GregorianCalendar prodajniKurs) {
-		this.prodajniKurs = prodajniKurs;
+		if(prodajniKurs == null){
+			throw new RuntimeException();
+		}else{
+			this.prodajniKurs = prodajniKurs;	
+		}
 	}
 	public GregorianCalendar getKupovniKurs() {
 		return kupovniKurs;
 	}
 	public void setKupovniKurs(GregorianCalendar kupovniKurs) {
+		if(kupovniKurs == null){
+			throw new RuntimeException();
+		}
 		this.kupovniKurs = kupovniKurs;
 	}
 	public GregorianCalendar getSrednjiKurs() {
 		return srednjiKurs;
 	}
 	public void setSrednjiKurs(GregorianCalendar srednjiKurs) {
+		if(srednjiKurs == null){
+			throw new RuntimeException();
+		}
 		this.srednjiKurs = srednjiKurs;
 	}
 	

@@ -11,6 +11,9 @@ public class Menjacnica {
 	}
 
 	public void setValute(Valuta[] valute) {
+		if(valute == null){
+			throw new RuntimeException("prazan niz!");
+		}
 		this.valute = valute;
 	}
 
