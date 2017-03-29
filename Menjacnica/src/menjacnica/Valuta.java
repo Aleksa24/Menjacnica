@@ -109,6 +109,7 @@ public class Valuta {
 			return false;
 		return true;
 	}
+	
 	@Override
 	public String toString() {
 		return "naziv: " + naziv + ", skraceni naziv: " + skraceniNaziv + ", prodajni kurs: " + prodajniKurs

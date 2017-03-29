@@ -10,4 +10,5 @@ public interface MenjacnicaInterfejs {
 	public void brisanjeKursa();
 	public Valuta pronadjiValutu(GregorianCalendar datum);
 	
+	
 }
